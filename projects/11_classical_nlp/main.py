@@ -2,6 +2,13 @@
 from pathlib import Path
 from collections import Counter
 import argparse, json, math, re
+import gensim.downloader as api
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
@@ -50,21 +57,52 @@ def perplexity(texts,gram,history,vocab,n=3):
     return math.exp(-log_sum/count)
 
 def main():
-    pa=argparse.ArgumentParser();pa.add_argument('--ngram',type=int,default=3);args=pa.parse_args()
-    if args.ngram<2:pa.error('--ngram must >=2')
-    X=[r for r,y in REVIEWS];y=[y for r,y in REVIEWS]
-    train_idx,test_idx=train_test_split(list(range(len(y))),test_size=.3,stratify=y,random_state=42)
-    train=[X[i] for i in train_idx];test=[X[i] for i in test_idx]
-    yt=[y[i] for i in train_idx];ys=[y[i] for i in test_idx]
-    result={}
-    for name,vectorizer in [('BoW',CountVectorizer(ngram_range=(1,2))),('TFIDF',TfidfVectorizer(ngram_range=(1,2)))]:
-        model=make_pipeline(vectorizer,LogisticRegression(max_iter=1000))
-        model.fit(train,yt);pred=model.predict(test)
-        result[name]=accuracy_score(ys,pred)
-        print(name,'accuracy',result[name], 'prediction example:',model.predict(['a wonderful performance'])[0])
-    gram,hist,vocab=train_ngram(train,args.ngram)
-    result['smoothed_test_perplexity']=perplexity(test,gram,hist,vocab,args.ngram)
-    print('N-gram PPL on held-out reviews:',round(result['smoothed_test_perplexity'],2))
-    OUT.mkdir(parents=True,exist_ok=True);(OUT/'metrics.json').write_text(json.dumps(result,indent=2))
-    print('Results on a tiny teaching dataset; do not treat the accuracy as a benchmark.')
-if __name__=='__main__':main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model",
+        default="glove-wiki-gigaword-200"
+    )
+    parser.add_argument(
+        "--words",
+        nargs="+",
+        default=["king", "queen", "man", "woman", "apple", "orange"]
+    )
+    args = parser.parse_args()
+
+    # Download pretrained embeddings or load them from cache
+    print(f"Loading pretrained embeddings: {args.model}")
+    vectors = api.load(args.model)
+
+    # Select words available in the vocabulary
+    words = [word for word in args.words if word in vectors]
+
+    if len(words) < 2:
+        parser.error("At least two valid words are required.")
+
+    # Reduce embedding dimensions to 2D
+    embeddings = np.array([vectors[word] for word in words])
+    coordinates = PCA(n_components=2).fit_transform(embeddings)
+
+    # Save visualization
+    output_dir = (
+        Path(__file__).resolve().parents[2]
+        / "outputs"
+        / "11_classical_nlp"
+    )
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    fig, ax = plt.subplots()
+    ax.scatter(coordinates[:, 0], coordinates[:, 1])
+
+    for (x, y), word in zip(coordinates, words):
+        ax.annotate(word, (x, y))
+
+    output_file = output_dir / "embeddings_pca.png"
+    fig.savefig(output_file)
+    plt.close(fig)
+
+    print(f"Visualization saved to: {output_file}")
+
+
+if __name__ == "__main__":
+    main()
