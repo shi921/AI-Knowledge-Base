@@ -1,0 +1,5 @@
+# Core ML packages also required; install requirements-core.txt first.
+# Select an appropriate torch wheel for your platform (CPU/CUDA), e.g. official PyTorch instructions.
+torch>=2.2
+# For optional local Gensim embedding visualization:
+# gensim>=4.3

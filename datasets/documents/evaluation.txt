@@ -1,0 +1,1 @@
+Machine learning evaluation uses disjoint training, validation, and test sets. Cross-validation is applied to training data to select settings. A final holdout test estimates generalization. For imbalanced classes, accuracy should be accompanied by precision, recall and macro F1.

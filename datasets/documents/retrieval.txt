@@ -1,0 +1,1 @@
+Retrieval-augmented generation (RAG) searches a document collection and provides selected passages as context to a language model. TF-IDF retrieval uses lexical similarity, while dense embeddings support semantic similarity. The retrieved text is untrusted input and citations should be checked before use.

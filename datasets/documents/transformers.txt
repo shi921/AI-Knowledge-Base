@@ -1,0 +1,1 @@
+Transformer attention computes interactions between tokens using queries, keys and values. Multi-head self attention combines patterns across subspaces, and position encodings provide word order information. A classifier can read a pooled representation to predict document sentiment.

@@ -1,0 +1,10 @@
+# Install only when needed; not every project requires these packages
+flask>=3.0
+pytest>=8
+river>=0.21
+shap>=0.46
+xlrd>=2.0.1
+xgboost>=2.0
+ucimlrepo>=0.0.7
+langchain-core>=0.3
+langchain-openai>=0.3

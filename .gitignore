@@ -1,0 +1,52 @@
+# Python and virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*credentials*.json
+*secrets*.json
+
+# Trained outputs and downloads
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.joblib
+*.bin
+*.kv
+*.pkl
+*.pickle
+*.xls
+*.xlsx
+
+# External neural language model assets — preserve empty directories
+projects/12_neural_language_models/data/**
+!projects/12_neural_language_models/data/.gitkeep
+!projects/12_neural_language_models/data/wikitext-103/
+!projects/12_neural_language_models/data/wikitext-103/.gitkeep
+!projects/12_neural_language_models/data/wikitext-2/
+!projects/12_neural_language_models/data/wikitext-2/.gitkeep
+projects/12_neural_language_models/pretrained_model/**
+!projects/12_neural_language_models/pretrained_model/.gitkeep
+
+# Local LoRA adapters and third-party corpora
+projects/14_llm_prompting_and_lora/checkpoint/**
+!projects/14_llm_prompting_and_lora/checkpoint/.gitkeep
+projects/13_transformer_encoder/data/**
+!projects/13_transformer_encoder/data/.gitkeep
+datasets/twitter/
+datasets/faces/
+datasets/customer/

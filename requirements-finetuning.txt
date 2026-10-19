@@ -1,0 +1,7 @@
+# Optional, network-dependent LoRA/Hugging Face project.
+# Install PyTorch separately for your CPU/CUDA environment.
+transformers>=4.50,<5
+datasets>=3,<5
+peft>=0.15,<1
+accelerate>=1.0,<2
+safetensors>=0.4
