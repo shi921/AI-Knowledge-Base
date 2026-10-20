@@ -53,11 +53,11 @@ print(pca.explained_variance_ratio_)
 
 尾随平均使用当前及过去 `k-1` 个点：`series.rolling(k).mean()`；居中平均使用两侧观测：`series.rolling(k,center=True).mean()`。前者适合在线分析，后者适合回顾性趋势展示。完整项目采用**合成房价的月度成交序列**演示时间平滑。
 
-## 常见考试误区
+## 常见误区
 
 - **数据泄漏**：划分前整体拟合 `StandardScaler`/PCA/`SimpleImputer` 或特征选择，导致评估偏乐观。
 - `LabelEncoder` 编码非有序输入类别会诱导虚假的大小关系。
 - PCA 擅长保留方差，但大方差不等于预测目标最相关。
-- 采样的时间数据不能随意随机打乱作 CV；时间序列宜按时间顺序切分。
+- 采样的时间数据不能随意随机打乱作CV；时间序列宜按时间顺序切分。
 
 **完整项目**：[`projects/01_data_foundations/main.py`](../projects/01_data_foundations/main.py) 和 `customer_pca.py`。**扩展实践**：修改 PCA 维数为 3，比较 explained variance 和可视化结构。
