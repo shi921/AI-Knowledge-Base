@@ -17,4 +17,4 @@ python projects/14_llm_prompting_and_lora/lora_pipeline.py --mode infer --adapte
 
 Training downloads a model and dataset and may require substantial memory, a GPU, network access, or paid resources. A LoRA adapter is not a complete model; use the correct base model. Generated artifacts belong in the ignored `outputs/` directory.
 
-**Related notes:** [Chapter 14](../../notes/14_llm_prompting_finetuning_lora.md).
+**Related notes:** [Chapter 13](../../notes/13_llm_foundations.md), [Chapter 14](../../notes/14_llm_prompting_finetuning_lora.md), [Chapter 15](../../notes/15_llm_langchain_rag.md).

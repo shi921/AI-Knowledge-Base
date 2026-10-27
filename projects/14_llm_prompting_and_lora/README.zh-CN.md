@@ -17,4 +17,4 @@ python projects/14_llm_prompting_and_lora/lora_pipeline.py --mode infer --adapte
 
 上述训练命令会下载模型与数据集，可能需要大量内存、网络与 GPU，并可能产生费用。Adapter 不是完整模型，必须配套正确的 Base Model。输出写在被忽略的 `outputs/` 中。
 
-**相关知识笔记：** [第 14 章](../../notes/14_llm_prompting_finetuning_lora.zh-CN.md)。
+**相关知识笔记：** [第 13 章](../../notes/13_llm_foundations.zh-CN.md)、[第 14 章](../../notes/14_llm_prompting_finetuning_lora.zh-CN.md)、[第 15 章](../../notes/15_llm_langchain_rag.zh-CN.md)。

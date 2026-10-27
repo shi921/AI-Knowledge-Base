@@ -13,4 +13,4 @@ curl -X POST http://127.0.0.1:8000/predict -H 'Content-Type: application/json' -
 
 Tests: `python -m pytest projects/04_flask_iris_api/test_api.py -q`. Demonstrates training, saving, loading, validating inputs, and returning HTTP JSON. Flask's development server is not suitable for production deployment.
 
-**Related notes:** [Chapter 04](../../notes/04_flask_model_deployment.md).
+**Related notes:** [Chapter 06](../../notes/06_flask_model_deployment.md).

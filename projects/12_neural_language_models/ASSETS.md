@@ -25,4 +25,4 @@ Without external assets you can run the built-in mini-corpus: `python projects/1
 
 The expected LSTM uses `embedding_dim=512`, `hidden_dim=1024`, and `num_layers=3`; vocabulary, tokenizer, checkpoint layout, and `torchtext` versions must be compatible. Unpickling `vocab.pkl` can execute code: load trusted sources only. `.gitkeep` is an empty placeholder, not a dataset or model.
 
-**Related notes:** [Chapter 12](../../notes/12_neural_language_models.md).
+**Related notes:** [Chapter 11](../../notes/11_neural_language_models.md).

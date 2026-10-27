@@ -13,4 +13,4 @@ curl -X POST http://127.0.0.1:8000/predict -H 'Content-Type: application/json' -
 
 可通过 `python -m pytest projects/04_flask_iris_api/test_api.py -q` 测试。项目展示训练、保存、加载、输入验证与 HTTP 返回，开发服务器不适于直接用于生产环境。
 
-**相关知识笔记：** [第 04 章](../../notes/04_flask_model_deployment.zh-CN.md)。
+**相关知识笔记：** [第 06 章](../../notes/06_flask_model_deployment.zh-CN.md)。

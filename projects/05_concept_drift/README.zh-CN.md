@@ -9,4 +9,4 @@ python projects/05_concept_drift/sea.py --init 1000 --batch-size 500 --max-batch
 
 `datasets/stagger` 和 `datasets/sea` 是自动生成的合成时序数据，标签决策规则会在序列中变化，用于展示先评估后更新、滚动训练及 Page–Hinkley 漂移检测。如果未安装 River，会使用简化的本地检测器。检测阈值和延迟需要针对具体数据校准。
 
-**相关知识笔记：** [第 05 章](../../notes/05_stream_learning_concept_drift.zh-CN.md)。
+**相关知识笔记：** [第 07 章](../../notes/07_stream_learning_concept_drift.zh-CN.md)。

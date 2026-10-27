@@ -10,4 +10,4 @@ python projects/07_multiview_stacking/main.py --data /path/to/private_dataset.cs
 
 Programmatically generated **synthetic examples** demonstrate two feature views and a meta-classifier. Disjoint base/meta/test splits prevent information leakage into the meta-model. Toy results only verify code behavior, not performance on real populations. No personal social-media records are distributed.
 
-**Related notes:** [Chapter 07](../../notes/07_multiview_text_classification_stacking.md), [Chapter 11](../../notes/11_classical_nlp_language_models.md).
+**Related notes:** [Chapter 10](../../notes/10_multiview_text_classification_stacking.md), [Chapter 09](../../notes/09_classical_nlp_language_models.md).

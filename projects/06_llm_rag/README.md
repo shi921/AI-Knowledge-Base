@@ -11,4 +11,4 @@ python projects/06_llm_rag/agent.py
 
 With `OPENAI_API_KEY` configured and `langchain-core langchain-openai` installed, use `--backend openai` to enable cloud-based generation. Retrieved passages are sent to the provider and requests may incur charges. The default TF-IDF engine performs **lexical** retrieval, not neural semantic embedding search. Add only text documents you have permission to process to `datasets/documents/`.
 
-**Related notes:** [Chapter 06](../../notes/06_llm_langchain_rag.md), [Chapter 14](../../notes/14_llm_prompting_finetuning_lora.md).
+**Related notes:** [Chapter 15](../../notes/15_llm_langchain_rag.md), [Chapter 13](../../notes/13_llm_foundations.md), [Chapter 14](../../notes/14_llm_prompting_finetuning_lora.md).

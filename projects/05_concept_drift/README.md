@@ -9,4 +9,4 @@ python projects/05_concept_drift/sea.py --init 1000 --batch-size 500 --max-batch
 
 `datasets/stagger/` and `datasets/sea/` contain synthetic temporal streams whose labeling rules change over time. They demonstrate test-then-train evaluation, sliding-window retraining, and Page–Hinkley detection. A simplified local detector is used if River is unavailable. Calibrate detection thresholds and latency for real applications.
 
-**Related notes:** [Chapter 05](../../notes/05_stream_learning_concept_drift.md).
+**Related notes:** [Chapter 07](../../notes/07_stream_learning_concept_drift.md).

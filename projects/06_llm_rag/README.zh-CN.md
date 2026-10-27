@@ -11,4 +11,4 @@ python projects/06_llm_rag/agent.py
 
 设置 `OPENAI_API_KEY` 且安装 `langchain-core langchain-openai` 后，可使用 `--backend openai` 开启云端生成（传输检索文档片段，会产生费用）。默认 TF-IDF 是**词汇检索**，不是神经语义向量检索。可将经过授权的纯文本文件放入 `datasets/documents/` 进行扩展。
 
-**相关知识笔记：** [第 06 章](../../notes/06_llm_langchain_rag.zh-CN.md)、[第 14 章](../../notes/14_llm_prompting_finetuning_lora.zh-CN.md)。
+**相关知识笔记：** [第 15 章](../../notes/15_llm_langchain_rag.zh-CN.md)、[第 13 章](../../notes/13_llm_foundations.zh-CN.md)、[第 14 章](../../notes/14_llm_prompting_finetuning_lora.zh-CN.md)。

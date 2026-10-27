@@ -16,4 +16,4 @@ python projects/03_classification_and_faces/faces.py --data /path/to/authorized/
 
 仅加载可信数据，注意真实人脸样本涉及个人隐私、公开使用和再分发权。
 
-**相关知识笔记：** [第 03 章](../../notes/03_supervised_learning_evaluation.zh-CN.md)、[第 02 章](../../notes/02_preprocessing_feature_engineering_pca.zh-CN.md)。
+**相关知识笔记：** [第 04 章](../../notes/04_supervised_learning_evaluation.zh-CN.md)、[第 02 章](../../notes/02_preprocessing_feature_engineering_pca.zh-CN.md)。

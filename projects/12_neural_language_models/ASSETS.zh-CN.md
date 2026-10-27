@@ -25,4 +25,4 @@ projects/12_neural_language_models/
 
 提示：`.gitkeep` 是空文件，不是数据或模型本身。
 
-**相关知识笔记：** [第 12 章](../../notes/12_neural_language_models.zh-CN.md)。
+**相关知识笔记：** [第 11 章](../../notes/11_neural_language_models.zh-CN.md)。

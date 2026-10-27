@@ -9,4 +9,4 @@ python projects/10_pytorch_mlp/main.py --epochs 12
 
 Includes DataLoaders, forward and backward passes, cross-entropy loss, Adam, validation-based early stopping, model evaluation, saving, and restoring weights. Runs on CPU and does not require pretrained models.
 
-**Related notes:** [Chapter 10](../../notes/10_neural_networks_pytorch.md).
+**Related notes:** [Chapter 08](../../notes/08_neural_networks_pytorch.md).

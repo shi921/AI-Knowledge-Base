@@ -16,4 +16,4 @@ python projects/03_classification_and_faces/faces.py --data /path/to/authorized/
 
 Use trustworthy inputs and observe privacy, consent, and redistribution requirements for face data.
 
-**Related notes:** [Chapter 03](../../notes/03_supervised_learning_evaluation.md), [Chapter 02](../../notes/02_preprocessing_feature_engineering_pca.md).
+**Related notes:** [Chapter 04](../../notes/04_supervised_learning_evaluation.md), [Chapter 02](../../notes/02_preprocessing_feature_engineering_pca.md).
