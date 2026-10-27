@@ -2,6 +2,11 @@
 
 # 12 | Neural Language Models: Neural N-grams, LSTMs, and Generation
 
+> **🧭 Knowledge Map Position**: Stage 4 (Deep Learning & NLP Evolution) · **Step 11 of 14**  
+> - **💡 Intuitive Analogy**: Statistical N-grams (Chapter 11) memorize exact word combinations like a rigid lookup table—if they've seen "the dog runs" but never "the cat walks", they fail. **Neural N-grams** map words into dense semantic coordinates (**Embeddings**, where "cat" and "dog" sit close together), while **LSTMs** act like **a reader carrying a scratchpad (Hidden/Cell State)**, updating notes after every word to generate the next token one step at a time.  
+> - **🎯 Why Does This Matter?**: It bridges discrete token IDs and continuous neural networks, introducing **Embedding layers** and **autoregressive token-by-token text generation**.  
+> - **🔗 Learning Chain**: [07 | Multi-view Stacking](07_multiview_text_classification_stacking.md) (and [11 | Classical NLP](11_classical_nlp_language_models.md)) → This Chapter (Embeddings & recurrent language models) → **Next Step**: [13 | Transformers & Self-Attention](13_transformer_attention.md) (Why sequential recurrence hits a bottleneck—and how Self-Attention revolutionized AI).
+
 ## From frequency tables to networks
 
 A statistical N-gram model counts contexts; a **neural N-gram** maps context token IDs to embeddings, concatenates them, and feeds an MLP that predicts vocabulary-wide logits. Standard training minimizes cross entropy for the next token. Build token-to-index mappings from **training text only** and map unseen terms to `<unk>`; never rebuild vocabulary on test data.

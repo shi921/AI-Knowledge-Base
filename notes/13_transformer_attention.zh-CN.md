@@ -2,6 +2,11 @@
 
 # 13｜Transformer：Scaled Dot-Product Attention 与 Encoder
 
+> **🧭 知识脉络定位**：第四阶段「深度学习与 NLP 语言模型演进篇」· **第 12 步 / 共 14 步**  
+> - **💡 零基础直觉比喻**：第 12 章的 LSTM 像“单列传话游戏”，第 1 个词的信息要传给第 100 个词，必须挨个过手 99 次，不仅慢而且容易传丢。**Transformer 的自注意力机制（Self-Attention）则像一场“全员圆桌会议”**——句子里的每一个词都同时手里拿着三张牌：**Q（Query，我要找什么信息？）**、**K（Key，我身上有什么标签？）**、**V（Value，我实际携带的干货内容）**。任意两个词不管隔得多远，都能直接对暗号（算 `Q` 和 `K` 的内积相似度）并交换信息！  
+> - **🎯 这一章解决什么核心问题？**：这是现代 AI 最重要的一块基石！2017 年诞生的 Transformer 彻底淘汰了慢速循环结构，实现了**大规模并行计算**与**全局上下文捕捉**——今天你听到的 BERT、GPT、Claude、Qwen、DeepSeek 全部是由本章的 Transformer 块堆叠而成的。  
+> - **🔗 前后衔接**：[12｜神经语言模型与 LSTM](12_neural_language_models.zh-CN.md) → 本章（掌握现代大模型的心脏：自注意力与 Transformer）→ **下一站**：[06｜大语言模型、LangChain 与 RAG](06_llm_langchain_rag.zh-CN.md)（既然预训练大模型已经有了，我们如何用它构建知识库问答与智能体应用？）。
+
 ## 注意力公式与张量形状
 
 对每个 token 向量做线性变换得到 `Q=XW_Q, K=XW_K, V=XW_V`。**Scaled Dot-Product Attention**：

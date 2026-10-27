@@ -2,6 +2,11 @@
 
 # 11 | Classical NLP: BoW, TF-IDF, Embeddings, N-grams, and Perplexity
 
+> **🧭 Knowledge Map Position**: Stage 4 (Deep Learning & NLP Evolution) · **Step 9 of 14**  
+> - **💡 Intuitive Analogy**: Computers only understand numbers, not words. The earliest solution was **counting word frequencies**: if an article repeats "goal, penalty, offside", it's likely about sports (**Bag of Words**), while common filler words ("the, is") get down-weighted in favor of distinctive terms (**TF-IDF**). To predict the next word in a sentence, **N-gram language models** count historical word sequences, and **Perplexity (PPL)** measures how "surprised or hesitant" the model is when guessing the next token.  
+> - **🎯 Why Does This Matter?**: It establishes the foundations of NLP—how text becomes vectors, why TF-IDF remains a fast retrieval baseline (used in Chapter 06 RAG), and why count-based models struggle with unseen words and word order.  
+> - **🔗 Learning Chain**: [10 | Neural Networks & PyTorch](10_neural_networks_pytorch.md) → This Chapter (Text vectorization & statistical LMs) → **Next Step**: [07 | Multi-view Text Stacking](07_multiview_text_classification_stacking.md) (Combine multiple text views) and [12 | Neural Language Models & LSTMs](12_neural_language_models.md) (Overcome sparse count limits with neural networks).
+
 ## Text representations
 
 - **Bag of Words (BoW):** count tokens using a vocabulary learned from training text; loses word order.

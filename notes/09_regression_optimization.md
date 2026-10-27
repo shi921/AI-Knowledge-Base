@@ -2,6 +2,11 @@
 
 # 09 | Gradient Descent and Numerical Optimization
 
+> **🧭 Knowledge Map Position**: Stage 2 (Core ML & Math Engine) · **Step 3 of 14**  
+> - **💡 Intuitive Analogy**: How does a machine actually "learn"? Imagine standing **blindfolded on a foggy hillside trying to reach the lowest valley (minimum prediction error)**. You feel the slope under your feet (**gradient**) and take a step downhill proportional to your stride (**learning rate**). Step too far and you overshoot into `NaN`; step too timidly and training takes forever.  
+> - **🎯 Why Study Chapter 09 Here?**: From simple linear regression to billion-parameter LLMs, training always boils down to **Loss Function + Gradient Descent + Regularization (Ridge)**. Mastering this chapter demystifies the engine inside every model you will ever train.  
+> - **🔗 Learning Chain**: [02 | Preprocessing & PCA](02_preprocessing_feature_engineering_pca.md) → This Chapter (Mathematical optimization engine) → **Next Step**: [03 | Supervised Learning & Evaluation](03_supervised_learning_evaluation.md) (Full regression/classification workflows and honest evaluation).
+
 ## Key concept chain
 
 1. Linear prediction: `ŷ = Xw`. Add a column of ones to incorporate the intercept in `w`.

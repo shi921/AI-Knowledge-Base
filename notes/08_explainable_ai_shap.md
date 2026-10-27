@@ -2,6 +2,11 @@
 
 # 08 | Explainable AI: Local and Global SHAP Explanations
 
+> **🧭 Knowledge Map Position**: Stage 2 (Core ML & Math Engine) · **Step 5 of 14**  
+> - **💡 Intuitive Analogy**: If a loan model rejects an applicant or a medical model flags a patient, outputting a bare number isn't enough. **SHAP is like an X-ray for black-box models (or a fair profit-sharing ledger)**—it calculates exactly how much each feature pushed a specific prediction above or below the baseline average.  
+> - **🎯 Why Does This Matter?**: It bridges the gap between accuracy and trust, giving you both **Global Explanations** (which features matter most overall) and **Local Explanations** (why *this specific sample* received its score), while warning against confusing feature attribution with causal effect.  
+> - **🔗 Learning Chain**: [03 | Supervised Learning & Evaluation](03_supervised_learning_evaluation.md) → This Chapter (Audit & explain model decisions) → **Next Step**: [04 | Flask Model Deployment](04_flask_model_deployment.md) (Package the validated model into a live HTTP API).
+
 ## Prediction accuracy is not interpretability
 
 `model.predict(x)` says **what** a model predicts. Explanation methods try to characterize **how** input features contribute to a specific prediction. Local explanations concern an instance; global explanations summarize patterns across many instances. Do not conflate the two.

@@ -2,6 +2,11 @@
 
 # 02 | Preprocessing, Feature Engineering, and PCA
 
+> **🧭 Knowledge Map Position**: Stage 1 (Data Foundations) · **Step 2 of 14**  
+> - **💡 Intuitive Analogy**: This chapter is **washing, chopping, and condensing ingredients**. Features come in wildly different units (e.g., house area in thousands vs. bedrooms in single digits) and must be normalized (**Scaling**); text categories ("North/South") must become numeric switches (**One-Hot Encoding**); and hundreds of redundant columns can be distilled into key directions via **PCA**.  
+> - **🎯 Why Does This Matter?**: It turns raw tables into clean numeric matrices ready for algorithms while guarding against the #1 beginner mistake: **Data Leakage** (fitting scalers or imputers before splitting train and test sets).  
+> - **🔗 Learning Chain**: [01 | Python & Pandas](01_python_pandas.md) → This Chapter (Clean & transform features) → **Next Step**: [09 | Gradient Descent & Optimization](09_regression_optimization.md) (Understand how machines mathematically learn weights from features).
+
 ## Which transformation should you use?
 
 | Transformation | Meaning | Typical use | Caveat |

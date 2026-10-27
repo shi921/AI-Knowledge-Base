@@ -2,6 +2,11 @@
 
 # 05 | Streaming Learning, Concept Drift, and Page–Hinkley
 
+> **🧭 Knowledge Map Position**: Stage 3 (Production Serving & MLOps) · **Step 7 of 14**  
+> - **💡 Intuitive Analogy**: A restaurant menu designed five years ago eventually loses customers as inflation and tastes change—that is **Concept Drift** (the underlying relationship `P(y|X)` shifts over time). You need an automated smoke detector (**Page–Hinkley test**) that rings an alarm when prediction errors steadily rise, triggering a menu refresh using recent orders (**sliding-window retraining / online learning**).  
+> - **🎯 Why Does This Matter?**: Static models inevitably decay in production. This chapter teaches **prequential (test-then-train)** evaluation and statistical drift detection so your system adapts to a changing world.  
+> - **🔗 Learning Chain**: [04 | Flask Model Deployment](04_flask_model_deployment.md) → This Chapter (Monitor drift & update online) → **Next Step**: [10 | Neural Networks and PyTorch](10_neural_networks_pytorch.md) (Transition from classical tabular ML to Deep Learning).
+
 ## Why do static models fail over time?
 
 User behavior, context, markets, and devices change. As `P(y|X)` changes, a model calibrated on old observations may perform worse on new ones.

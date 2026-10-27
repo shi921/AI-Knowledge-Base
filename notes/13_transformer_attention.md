@@ -2,6 +2,11 @@
 
 # 13 | Transformers: Scaled Dot-product Attention and Encoders
 
+> **🧭 Knowledge Map Position**: Stage 4 (Deep Learning & NLP Evolution) · **Step 12 of 14**  
+> - **💡 Intuitive Analogy**: An LSTM (Chapter 12) is like a single-file game of telephone—word #1 can only reach word #100 by passing through 99 middlemen. **A Transformer's Self-Attention is like an open roundtable meeting**: every word simultaneously broadcasts three cards—**Query (`Q`, what I am looking for)**, **Key (`K`, what label I advertise)**, and **Value (`V`, the content I carry)**. Every word directly matches its `Q` against every other word's `K` in parallel, regardless of distance!  
+> - **🎯 Why Does This Matter?**: This is the architectural heart of modern AI. Every major Large Language Model (BERT, GPT, Claude, Qwen, Llama) is built by stacking the exact Self-Attention, LayerNorm, Positional Encoding, and Feed-Forward blocks covered here.  
+> - **🔗 Learning Chain**: [12 | Neural Language Models & LSTMs](12_neural_language_models.md) → This Chapter (Master the Transformer & Self-Attention architecture) → **Next Step**: [06 | LLMs, LangChain, and RAG](06_llm_langchain_rag.md) (How do we turn pre-trained Transformer LLMs into grounded applications and Agents?).
+
 ## Attention formula and tensor shapes
 
 Project each token representation into `Q=XW_Q`, `K=XW_K`, and `V=XW_V`. **Scaled dot-product attention** is:

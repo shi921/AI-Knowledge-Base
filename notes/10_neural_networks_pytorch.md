@@ -2,6 +2,11 @@
 
 # 10 | Neural Networks, Autograd, and PyTorch
 
+> **🧭 Knowledge Map Position**: Stage 4 (Deep Learning & NLP Evolution) · **Step 8 of 14**  
+> - **💡 Intuitive Analogy**: A linear model (Chapter 09) can only draw a straight line. A **Multi-Layer Perceptron (MLP)** stacks multiple linear layers separated by non-linear switches (**ReLU**) like LEGO bricks to bend and fit complex patterns, while **PyTorch Autograd** acts as an automatic bookkeeper that tracks every forward operation and computes all gradients in a single `.backward()` call.  
+> - **🎯 Why Does This Matter?**: It introduces the universal **4-step PyTorch training loop** (`zero_grad` → forward pass → compute loss → `backward` & `step`) that powers everything from simple classifiers to modern Transformers.  
+> - **🔗 Learning Chain**: [05 | Streaming Learning](05_stream_learning_concept_drift.md) (and [09 | Optimization](09_regression_optimization.md)) → This Chapter (PyTorch & neural network foundations) → **Next Step**: [11 | Classical NLP & Language Models](11_classical_nlp_language_models.md) (How do we turn human language into numbers?).
+
 ## From linear layers to MLPs
 
 `z=Wx+b` alone expresses only linear transformations. Compose nonlinear layers using ReLU, for example `h=ReLU(W1x+b1)` followed by `logits=W2h+b2`. For multiclass classification, `CrossEntropyLoss` expects **raw logits, not softmax probabilities**, and uses a numerically stable log-softmax internally.

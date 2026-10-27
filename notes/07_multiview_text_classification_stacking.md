@@ -2,6 +2,11 @@
 
 # 07 | Multi-view Text Classification and Stacking
 
+> **🧭 Knowledge Map Position**: Stage 4 (Deep Learning & NLP Evolution) · **Step 10 of 14**  
+> - **💡 Intuitive Analogy**: Think of **a panel of medical specialists**: one specialist examines the main symptom description (word-level TF-IDF), another inspects shorthand lab codes and prefixes (character-level n-grams), and a chief physician (**Meta-Classifier**) weighs both specialists' probability estimates to make the final diagnosis.  
+> - **🎯 Why Does This Matter?**: It shows how to fuse heterogeneous text views via **Stacking ensembles** while strictly enforcing disjoint `base / meta / test` splits so the meta-classifier never overfits on in-sample predictions.  
+> - **🔗 Learning Chain**: [11 | Classical NLP](11_classical_nlp_language_models.md) → This Chapter (Multi-view ensemble fusion) → **Next Step**: [12 | Neural Language Models & LSTMs](12_neural_language_models.md) (Move from sparse count features to neural sequence models).
+
 ## Learning goal
 
 Represent the same classification problem through complementary feature views, train separate base models, and combine their probability vectors with a meta-classifier. This is model ensembling, **not** synonymous with distributed computation.

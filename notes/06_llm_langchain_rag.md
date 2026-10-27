@@ -2,6 +2,13 @@
 
 # 06 | Large Language Models: Prompts, Chains, Agents, Memory, and RAG
 
+> **🧭 Knowledge Map Position**: Stage 5 (LLM Applications & Fine-Tuning) · **Step 13 of 14**  
+> - **💡 Intuitive Analogy**: A pre-trained Transformer LLM (Chapter 13) is like a **brilliant scholar locked in a closed-book exam room**—knowledgeable, but unaware of your company's private files, prone to guessing confidently when unsure (**hallucination**), and unable to use a calculator.  
+>   - **RAG (Retrieval-Augmented Generation)** turns that closed-book test into an **open-book exam**: before the LLM answers, your code retrieves the most relevant passages from your documents and pastes them into the prompt as evidence;  
+>   - **Agents & Tool Calling** give the scholar **a toolkit** so it can request external function calls (search, math, APIs).  
+> - **🎯 Why Does This Matter?**: RAG and Agents are the backbone of modern enterprise AI engineering. This chapter covers document chunking, lexical vs. semantic retrieval, grounded generation, tool binding, and prompt-injection defense.  
+> - **🔗 Learning Chain**: [13 | Transformers & Self-Attention](13_transformer_attention.md) → This Chapter (Ground LLMs with RAG & tools) → **Final Step**: [14 | LLM Prompting, Fine-Tuning, and LoRA](14_llm_prompting_finetuning_lora.md) (When prompting and RAG aren't enough, how do we adapt the model's weights on a budget?).
+
 ## Building blocks
 
 | Concept | Purpose | Typical API |

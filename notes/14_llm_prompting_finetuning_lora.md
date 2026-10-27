@@ -2,6 +2,14 @@
 
 # 14 | LLM Prompting, Fine-tuning, LoRA, and PEFT
 
+> **🧭 Knowledge Map Position**: Stage 5 (LLM Applications & Fine-Tuning) · **Step 14 of 14 (Capstone)**  
+> - **💡 Intuitive Analogy**: To customize a general-purpose LLM for your domain, you have three escalating tools:  
+>   1. **Prompting (Zero/Few-shot)**: Give clearer instructions or a couple of input-output examples in the prompt without touching model weights;  
+>   2. **RAG (Chapter 06)**: Hand the model an up-to-date reference book at runtime;  
+>   3. **LoRA / PEFT Fine-Tuning**: When you must change the model's intrinsic style, tone, or task habits, retraining all billions of weights is prohibitively expensive. **LoRA freezes the original brain and attaches a tiny, trainable "transparent overlay note" (low-rank matrices `ΔW = BA`)**—updating <1% of parameters while achieving near full-tuning behavior!  
+> - **🎯 Why Does This Matter?**: It teaches architectural decision-making (knowing when to choose Prompting vs. RAG vs. Fine-Tuning) and walks through training and loading a HuggingFace PEFT/LoRA adapter.  
+> - **🔗 Learning Chain**: [06 | LLMs, LangChain, and RAG](06_llm_langchain_rag.md) → This Chapter (Prompt engineering & LoRA fine-tuning) → 🎉 **Congratulations on completing all 5 stages! Return to the [Master Roadmap](../STUDY_ROADMAP.md) for advanced open-source benchmarks.**
+
 ## Prompting versus retrieval versus tuning
 
 **Zero-shot prompting** defines the task without examples; **few-shot prompting** includes demonstrations to clarify formats. Asking a model to check an answer may improve some outputs but does not guarantee correctness. Require explicit structured formats and validate the parsed result separately.

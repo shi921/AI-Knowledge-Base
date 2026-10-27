@@ -2,6 +2,11 @@
 
 # 03 | Supervised Learning: Regression, Classification, and Model Evaluation
 
+> **🧭 Knowledge Map Position**: Stage 2 (Core ML & Math Engine) · **Step 4 of 14**  
+> - **💡 Intuitive Analogy**: Training a model is like preparing for a final exam: the **Training set** is daily homework, **Cross-Validation (CV)** is a series of mock exams used to tune study habits (hyperparameters), and the **Test set** is the real final exam—taken only once at the very end without peeking!  
+> - **🎯 Why Does This Matter?**: It covers the two pillars of supervised ML—**Regression** (predicting continuous numbers like house prices) and **Classification** (predicting categories)—and teaches why naive Accuracy fails on imbalanced problems (where Precision, Recall, F1, and PR-AUC are essential).  
+> - **🔗 Learning Chain**: [09 | Gradient Descent & Optimization](09_regression_optimization.md) → This Chapter (Supervised workflows & evaluation) → **Next Step**: [08 | Explainable AI with SHAP](08_explainable_ai_shap.md) (Once a model is accurate, how do we explain *why* it made each decision?).
+
 ## Unified workflow
 
 Define the problem → explore and clean → split train/validation/test → fit preprocessing **inside training folds** → select models and hyperparameters via cross-validation → evaluate test data once → retrain on all labeled training data → export predictions.

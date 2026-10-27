@@ -2,6 +2,11 @@
 
 # 01 | Python and Pandas Fundamentals
 
+> **🧭 Knowledge Map Position**: Stage 1 (Data Foundations) · **Step 1 of 14**  
+> - **💡 Intuitive Analogy**: If building an AI model is like cooking a gourmet dish, this chapter is **sourcing and inspecting raw ingredients**. Real-world data arrives with mud, missing pieces (NaNs), spoiled outliers, and mislabeled types.  
+> - **🎯 Why Does This Matter?**: No machine learning algorithm can digest messy raw files directly. You first need Python and Pandas to load tables into memory, inspect shapes and missing rates, and summarize distributions.  
+> - **🔗 Learning Chain**: **Start Here** → This Chapter (Load & inspect raw data) → **Next Step**: [02 | Preprocessing, Feature Engineering, and PCA](02_preprocessing_feature_engineering_pca.md) (Clean, scale, encode, and compress features).
+
 ## Learning goals
 
 Move from numbers, strings, datetimes, control flow, functions, and collections to NumPy arrays and Pandas tables. Be able to load data, profile quality, and compute grouped statistics as a reusable workflow.

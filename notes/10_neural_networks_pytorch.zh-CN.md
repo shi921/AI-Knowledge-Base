@@ -2,6 +2,11 @@
 
 # 10｜神经网络、自动微分和 PyTorch
 
+> **🧭 知识脉络定位**：第四阶段「深度学习与 NLP 语言模型演进篇」· **第 8 步 / 共 14 步**  
+> - **💡 零基础直觉比喻**：第 09 章的线性模型就像只能画一条直线的尺子，遇到弯弯曲曲的复杂图案就无能为力了。**神经网络（MLP）就像是把许多小折线（非线性激活函数 ReLU）一层层串联起来的乐高积木**——第一层认出边缘，第二层拼出局部形状，最后一层认出整张图。而 **PyTorch 的 Autograd（自动微分）** 就像一位自动记账员，把你正向计算的每一步都记在账本上，反向传播时一键算出所有积木该怎么微调！  
+> - **🎯 这一章解决什么核心问题？**：帮你跨过从传统 Scikit-learn 调包到现代深度学习框架 **PyTorch** 的门槛，彻底吃透深度学习永恒不变的**“训练循环四步法”**：清空梯度 `zero_grad` → 前向预测 → 算损失 `loss` → 反向传播 `backward` 与参数更新 `step`。  
+> - **🔗 前后衔接**：[05｜流式学习与概念漂移](05_stream_learning_concept_drift.zh-CN.md)（及 [09｜梯度下降](09_regression_optimization.zh-CN.md)）→ 本章（搭起深度学习神经网络底座）→ **下一站**：[11｜传统 NLP 与统计语言模型](11_classical_nlp_language_models.zh-CN.md)（看看人类语言文字最初是怎么变成数学特征的）。
+
 ## 从线性层到 MLP
 
 线性变换 `z=Wx+b` 只有线性表达力；使用 ReLU 等非线性激活后堆叠多个层：`h=ReLU(W1x+b1)`，`logits=W2h+b2`。多分类中的 `CrossEntropyLoss` 接收**未经过 softmax 的 logits**，内部包含稳定的 log-softmax。训练时分别调用 `model.train()` 和 `model.eval()`；后者会影响 Dropout、BatchNorm，但不自动关闭梯度，推理通常再用 `torch.no_grad()`。
